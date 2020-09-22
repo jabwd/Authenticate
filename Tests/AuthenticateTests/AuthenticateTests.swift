@@ -13,7 +13,6 @@ final class AuthenticateTests: XCTestCase {
 		do {
 			let authPayload = try auth.sign(data: data)
 			XCTAssert(try auth.verify(payload: authPayload), "Unable to verify signature")
-			sleep(5)
 		} catch {
 			XCTAssert(false, "Unable to sign or verify")
 		}
